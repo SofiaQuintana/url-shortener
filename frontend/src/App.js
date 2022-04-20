@@ -34,8 +34,8 @@ function App() {
         }}>
           <Typography variant='h1' fontSize={35}>SHORTENER</Typography>
           <TextField variant="standard" label="URL" value={url} onChange={handleOnChangeUrl}></TextField>
-          <Button  variant="contained" sx={{ mt: 3, mb: 2, text:{ color:'gray' } }} onClick={cleanInput}>Clean</Button>
           <Button  variant="contained" sx={{ mt: 3, mb: 2, text:{ color:'blue' } }} onClick={submitShortUrl}>Short URL</Button>
+          <Button  variant="contained" sx={{ mt: 3, mb: 2, text:{ color:'gray' } }} onClick={cleanInput}>Clean</Button>
           <Typography color={'red'}>{shortUrl}</Typography>
         </Box>
       </Container>
