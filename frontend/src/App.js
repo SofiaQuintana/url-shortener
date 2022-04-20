@@ -1,6 +1,8 @@
 import './App.css';
 import { Button, Container, TextField, Typography } from '@mui/material';
 import { Box } from '@mui/system';
+import { React, useState } from 'react';
+import axios from 'axios';
 
 function App() {
 
@@ -30,11 +32,11 @@ function App() {
           gap: '55px',
           marginTop: '50px'
         }}>
-          <Typography variant='h1' fontSize={40}>SHORTENER</Typography>
-          <TextField value={url} onChange={handleOnChangeUrl}></TextField>
-          <Button onClick={cleanInput}>Clean</Button>
-          <Button onClick={submitShortUrl}>Short URL</Button>
-          <Typography color={'green'}>{shortUrl}</Typography>
+          <Typography variant='h1' fontSize={35}>SHORTENER</Typography>
+          <TextField variant="standard" label="URL" value={url} onChange={handleOnChangeUrl}></TextField>
+          <Button  variant="contained" sx={{ mt: 3, mb: 2, text:{ color:'gray' } }} onClick={cleanInput}>Clean</Button>
+          <Button  variant="contained" sx={{ mt: 3, mb: 2, text:{ color:'blue' } }} onClick={submitShortUrl}>Short URL</Button>
+          <Typography color={'red'}>{shortUrl}</Typography>
         </Box>
       </Container>
     </div>
